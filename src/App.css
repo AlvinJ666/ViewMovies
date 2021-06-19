@@ -1,10 +1,40 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #264653;
+  color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 5px;
+}
+
+.title {
+  font-size: 3.3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#startShow {
+  font-size: 30px;
+  line-height: 1.3;
+  position: relative;
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +65,86 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes heading {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: 140px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+#content {
+  position: relative;
+  animation-name: content;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes content {
+  0% {
+    left: -1000px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+.section {
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  display: -moz-inline-grid;
+}
+
+.form-label {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  padding: 0.8rem;
+}
+
+.form-input {
+  font-size: 1.8rem;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-style: none;
+  width: 1000px;
+}
+
+input[type="text"]:focus {
+  background-color: lightblue;
+  border: 0px solid white;
+  outline: none;
+}
+
+.form-button {
+  background-color: orange;
+  color: white;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 250ms;
+  border-style: none;
+  transition: width 0.5s;
+  width: 100px;
 }
