@@ -209,5 +209,9 @@ input[type="text"]:focus {
   overflow: scroll;
 }
 
-textarea {
+.overview {
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-left: 1rem;
 }
